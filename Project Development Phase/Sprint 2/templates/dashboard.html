@@ -9,9 +9,10 @@
 </head>
 <body>
     <div>
-        <div class="title">
-            Inventory Management System for Retailers
-            <input type="button" value="Logout">
+        <div class="title"><form action="/logout">
+                Inventory Management System for Retailers
+                <input type="submit" value="Logout" style="width: 5%;margin-right:2px">
+            </form>
         </div><br><br>
         <div class="button">
             <form action="/dashView">
@@ -48,6 +49,12 @@
                         </div>
                         <div>
                             <input type="number" placeholder="Quantity to be updated" name="quantity" required>
+                        </div>
+                        <div>
+                            <select name="update" id="update" required>
+                                <option value="restock">Restock</option>
+                                <option value="halt">Halt</option>
+                              </select>
                         </div>
                         <input type="submit" value="Submit">
                     </form>
