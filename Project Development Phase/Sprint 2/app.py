@@ -52,7 +52,6 @@ def register():
         ibm_db.bind_param(stmt, 1, username)
         ibm_db.execute(stmt)
         account = ibm_db.fetch_assoc(stmt)
-        print(account)
         if account:
             msg = 'Account already exists !'
         else:
@@ -77,8 +76,6 @@ def dashView():
     while ibm_db.fetch_row(stmt) != False:
         itemname.append(ibm_db.result(stmt, 0))
         quantity.append(ibm_db.result(stmt, 1))
-        print("ItemName is : ", ibm_db.result(stmt, 0),
-              " Quantity : ", ibm_db.result(stmt, 1))
     return render_template('inventory.html', msg=msg, itemname=itemname, quantity=quantity, lenin=len(itemname), lenqty=len(quantity))
 
 
