@@ -37,7 +37,7 @@ def login():
             msg = 'Logged in successfully !'
             ser = smtplib.SMTP('smtp.gmail.com', 587)
             ser.starttls()
-            ser.login('suga27102001@gmail.com', 'oihdgjwfydliwszx')
+            ser.login('suga27102001@gmail.com', '****************')
             ser.sendmail('suga27102001@gmail.com', username,
                          'Congratulations !!! Logged in successfully')
             print(session['username'])
@@ -70,7 +70,7 @@ def register():
             msg = 'You have successfully registered !'
             ser = smtplib.SMTP('smtp.gmail.com', 587)
             ser.starttls()
-            ser.login('suga27102001@gmail.com', 'oihdgjwfydliwszx')
+            ser.login('suga27102001@gmail.com', '****************')
             ser.sendmail('suga27102001@gmail.com', username,
                          'Congratulations !!! Registered successfully')
             return render_template('login.html')
@@ -140,7 +140,7 @@ def dashUpdate():
             result = 0
             ser = smtplib.SMTP('smtp.gmail.com', 587)
             ser.starttls()
-            ser.login('suga27102001@gmail.com', 'oihdgjwfydliwszx')
+            ser.login('suga27102001@gmail.com', '****************')
             ser.sendmail('suga27102001@gmail.com',
                          session['username'], 'Just a reminder, your stocks were drained, so restock them.')
             print('mail sent')
