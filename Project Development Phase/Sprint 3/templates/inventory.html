@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/inventory.css">
+</head>
+<body>
+    <div class="title">
+        <form action="/inventory">
+        <input type="submit" value="back">
+        <span class="titlename">Product and Stock Details</span>
+    </form>
+    </div><br><br>
+    <div>
+        <table>
+            <tr>
+              <th>Item Name</th>
+              <th>Quantity</th>
+            </tr>
+            {% for i in range(0,lenin) %}
+            <tr><td>{{ itemname[i] }}</td>
+            <td>{{ quantity[i] }}</td></tr>
+                        {% endfor %}
+            </tr>
+          </table>
+    </div>
+</body>
+</html>
